@@ -1,0 +1,111 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 0.45px solid #1e8cdb;
+    padding: 12px;
+    border-radius: 12px;
+    margin: 300px auto;
+    font-family: sans-serif;
+    color: white;
+    background-color:#1e8cdb ;
+    position: fixed;
+}
+button{
+    border: 0.45px solid #0069d9;
+
+}
+/* Estilos para o corpo do documento */
+body {
+    font-family: Arial, sans-serif;
+    background-color:rgb(236, 236, 236);
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para a seção de conteúdo */
+.content {
+    background-color: #1e8cdb;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 90px auto;
+    max-width: 500px;
+    right: 200px;
+    box-shadow: 2px 2px 3px 4px rgba(0, 0, 0, 0.178);
+}
+
+/* Estilos para os rótulos e inputs */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Garante que o padding não altere a largura total */
+}
+
+/* Estilos para o botão de envio */
+.butEnv {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 0.23px solid white;
+    font-weight: 600 ;
+}
+
+.butEnv:hover {
+    background-color: #014997;
+    color: white;
+}
+
+/* Estilos para a resposta */
+.resposta {
+    margin-top: 20px;
+    text-align: center;
+}
+img{
+    width: 120px;
+    border: none;
+    margin-left: 100px;
+    border-radius: 12px;
+
+}
+.navBar{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: #1e8cdb;
+}
+.resposta{
+    position: fixed;
+    bottom: 5px;
+    background-color: #adbac9;
+    color: white;
+    left:70px ;
+}
+.secRight{
+ margin-top: 200px;
+ margin-left: 70px;
+display:flex ;
+box-shadow: 2px 1px 3px 3px rgba(0, 0, 0, 0.329);
+
+}
+main{
+    display: flex;
+    
+}
