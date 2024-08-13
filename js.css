@@ -120,7 +120,7 @@ main {
 .content {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 900px;
     border: 0.45px solid #1e8cdb;
     padding: 12px;
     border-radius: 12px;
