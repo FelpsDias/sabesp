@@ -5,11 +5,12 @@
     border: 0.45px solid #1e8cdb;
     padding: 12px;
     border-radius: 12px;
-    margin: 300px auto;
+    margin: 100px auto;
     font-family: sans-serif;
     color: white;
-    background-color:#1e8cdb ;
+    background-color:red ;
     position: fixed;
+    left: 30px;
 }
 button{
     border: 0.45px solid #0069d9;
@@ -106,6 +107,36 @@ box-shadow: 2px 1px 3px 3px rgba(0, 0, 0, 0.329);
 
 }
 main{
+  
+}
+main {
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupar toda a altura da tela */
+    margin: 0; /* Remover qualquer margem que possa estar afetando a centralização */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 0.45px solid #1e8cdb;
+    padding: 12px;
+    border-radius: 12px;
+    font-family: sans-serif;
+    color: white;
+    background-color: #1e8cdb;
+    box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura total */
+    margin: 0 auto; /* Centralizar horizontalmente */
+}
+
+body {
+    margin: 0; /* Remove margens do body para evitar deslocamento */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupar toda a altura da tela */
+    background-color: rgb(236, 236, 236); /* Cor de fundo do body */
 }
