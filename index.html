@@ -3,29 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Código de Barras</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="js.css">
-    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .content {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+        input {
+            background-color: black;
+            color: white;
+            border: 1px solid #888;
+            margin-bottom: 15px;
+        }
+        input:focus {
+            border-color: rgb(128, 192, 245);
+        }
+        button {
+            width: 100%;
+            background-color: transparent;
+            color: rgb(128, 192, 245);
+            border: 1px solid rgb(128, 192, 245);
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        button:hover {
+            background-color: rgba(128, 192, 245, 0.2);
+            color: white;
+        }
+        label {
+            color: rgb(128, 192, 245);
+            margin-bottom: 5px;
+        }
+        .resposta {
+            margin-top: 15px;
+            font-size: 1.1em;
+            color: rgb(128, 192, 245);
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-   <nav class="navBar"> <img src="Sabesp.webp" alt=""></nav>
- <main>
-<br>
-       <section class="content">
-            <h1>Calculo Sabesp</h1>
-            <label for="" >Insira a Leitura atual</label>
-            <input type="number" name="" id="" class="leAt">
-            <label for="">Insira a Leitura TACE</label>
-            <input type="number" name="" id="" class="leTace">
-            <label for="">Insira o dia do mês que foi retirada a leitura</label>
-            <input type="number" name="" id="" class="diaTace">
-            <label for="number">Insira o dia do mês de hoje</label>
-            <input type="number" name="" id="" class="diaAtual">
-            <button class="butEnv btn btn-light my-2 my-sm-0">Enviar</button>
-        </section>
+    <div class="content">
+        <label for="codigo">Código de barras:</label>
+        <input type="number" id="codigo" class="form-control" placeholder="Digite o código de barras">
+        <button onclick="consultar()">CONSULTA</button>
+        <p class="resposta"></p>
+    </div>
 
- </main>
-    <h1 class="resposta"></h1>
+    <script>
+        function consultar() {
+            let codigo = document.getElementById('codigo').value;
+            if (codigo.length === 48) {
+                let parteEspecifica = codigo.substring(21, 35); // extrai a parte específica (do 22º ao 35º caractere)
+                parteEspecifica = parteEspecifica.slice(0, 2) + parteEspecifica.slice(3); // remove o terceiro dígito da parte extraída
+                document.querySelector('.resposta').innerText = `Parte extraída: ${parteEspecifica}`;
+            } else {
+                document.querySelector('.resposta').innerText = 'Código de barras inválido. Deve ter 48 dígitos.';
+            }
+        }
+    </script>
 </body>
-<script src="CALCULOSABESP.JS"></script>
-</html> 
+</html>
